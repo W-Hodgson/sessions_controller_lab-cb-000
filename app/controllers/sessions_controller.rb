@@ -8,10 +8,11 @@ class SessionsController < ApplicationController
     end
 
     session[:name] = params[:name]
-    redirect_to(controller: 'applcation', action: 'hello')
+    redirect_to(controller: 'application', action: 'hello')
   end
 
   def destroy
     session.delete :name
+    redirect_to controller: 'application'
   end
 end
