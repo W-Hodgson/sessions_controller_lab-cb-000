@@ -13,6 +13,6 @@ class SessionsController < ApplicationController
 
   def destroy
     session.delete :name
-    redirect_to controller: 'application'
+    redirect_to controller: 'application', action: 'hellp'
   end
 end
